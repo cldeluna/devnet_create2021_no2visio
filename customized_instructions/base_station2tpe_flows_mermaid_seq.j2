@@ -1,0 +1,14 @@
+sequenceDiagram
+    Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}->>+TPE: Bidirectional ICMP
+    Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}->>+TPE: Unidirectional SCP TCP/22
+    Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}->>+TPE: Unidirectional SSH v2 TCP/22
+    Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}->>+TPE: Unidirectional IEC 104 TCP/2404
+    Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}->>+TPE: Unidirectional ESP Protocol 50
+    Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}->>+TPE: Bidirectional IKE v2 UDP/500 a-slrc1-eu.thingpark.com, b-slrc1-eu.thingpark.com
+    TPE->>+Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}: Bidirectional IKE v2 UDP/500 a-slrc1-eu.thingpark.com, b-slrc1-eu.thingpark.com
+    Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}->>+TPE: Bidirectional MOBIKE v2 UDP/4500 a-slrc1-eu.thingpark.com, b-slrc1-eu.thingpark.com
+    TPE->>+Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}: Bidirectional MOBIKE v2 UDP/4500 a-slrc1-eu.thingpark.com, b-slrc1-eu.thingpark.com
+    Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}->>+TPE: Unidirectional SFTP TCP/22 a-slrc1-eu.thingpark.com, b-slrc1-eu.thingpark.com
+    Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}->>+SUPPORT: Unidirectional SFTP TCP/22 a-support1-eu.thingpark.com, b-support1-eu.thingpark.com
+    Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}->>+Network Time Synchronization: Unidirectional NTP UDP/123 ntp server ip {{ cfg['Site_NTP'] }}, 0.pool.ntp.org, ntp server ip 1.pool.ntp.org
+    Base Station {{ cfg['BaseStationName'] }} {{ cfg['BaseStationIP'] }}->>+Domain Name Services: Unidirectional DNS UDP/53 {{ cfg['Site_DNS']}}, 8.8.8.8
