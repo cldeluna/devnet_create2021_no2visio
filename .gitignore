@@ -7,3 +7,4 @@ tmp*
 *.md
 ntc-templates
 .env
+misc
