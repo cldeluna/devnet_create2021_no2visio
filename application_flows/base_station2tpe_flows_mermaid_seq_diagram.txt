@@ -1,0 +1,18 @@
+sequenceDiagram
+    Base Station->>+TPE: Unidirectional ICMP - 
+    Base Station->>+TPE: Unidirectional SCP TCP/22 
+    Base Station->>+TPE: Unidirectional SSH v2 TCP/22 
+    Base Station->>+TPE: Unidirectional IEC 104 TCP/2404 
+    Base Station->>+TPE: Unidirectional ESP Protocol 50 
+    Base Station->>+TPE: Bidirectional IKE v2 UDP/500 
+    TPE->>+Base Station: Bidirectional IKE v2 UDP/500 
+    Base Station->>+TPE: Bidirectional MOBIKE v2 UDP/4500 
+    TPE->>+Base Station: Bidirectional MOBIKE v2 UDP/4500 
+    Base Station->>+TPE: Unidirectional SFTP TCP/22 
+    Base Station->>+SUPPORT: Unidirectional SFTP TCP/22 
+    Base Station->>+Network Time Synchronization: Unidirectional NTP UDP/123 
+    Base Station->>+Domain Name Services: Unidirectional DNS UDP/53 
+    TPE Network Server->>+Application Server: Bidirectional HTTP TCP/80 
+    Application Server->>+TPE Network Server: Bidirectional HTTP TCP/80 
+    TPE Network Server->>+Application Server: Bidirectional HTTPS TCP/443 
+    Application Server->>+TPE Network Server: Bidirectional HTTPS TCP/443 
