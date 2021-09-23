@@ -1,0 +1,20 @@
+[
+    {
+        "version": "15.2(2)E9",
+        "rommon": "Bootstrap",
+        "hostname": "oceans-cs01",
+        "uptime": "21 hours, 4 minutes",
+        "reload_reason": "Reload command",
+        "running_image": "c2960s-universalk9-mz.152-2.E9.bin",
+        "hardware": [
+            "WS-C2960S-48FPS-L"
+        ],
+        "serial": [
+            "FOC1610Y1H9"
+        ],
+        "config_register": "0xF",
+        "mac": [
+            "3C:CE:73:BA:94:80"
+        ]
+    }
+]

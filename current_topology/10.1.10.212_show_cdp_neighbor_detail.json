@@ -1,0 +1,92 @@
+[
+    {
+        "destination_host": "e0cbbc34acf6",
+        "management_ip": "10.1.10.35",
+        "platform": "Meraki MR33 Cloud Managed AP",
+        "remote_port": "Port 0",
+        "local_port": "GigabitEthernet1/0/52",
+        "software_version": "1",
+        "capabilities": "Router Switch"
+    },
+    {
+        "destination_host": "e0cbbc34acf6",
+        "management_ip": "10.1.10.35",
+        "platform": "Meraki MR33 Cloud Managed AP",
+        "remote_port": "Port 0",
+        "local_port": "FastEthernet0",
+        "software_version": "1",
+        "capabilities": "Router Switch"
+    },
+    {
+        "destination_host": "oceans-cs01.uwaco.com",
+        "management_ip": "10.1.10.212",
+        "platform": "cisco WS-C2960S-48FPS-L",
+        "remote_port": "GigabitEthernet1/0/52",
+        "local_port": "FastEthernet0",
+        "software_version": "Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.2(2)E9, RELEASE SOFTWARE (fc4)",
+        "capabilities": "Switch IGMP"
+    },
+    {
+        "destination_host": "oceans-cs01.uwaco.com",
+        "management_ip": "10.1.10.212",
+        "platform": "cisco WS-C2960S-48FPS-L",
+        "remote_port": "FastEthernet0",
+        "local_port": "GigabitEthernet1/0/52",
+        "software_version": "Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.2(2)E9, RELEASE SOFTWARE (fc4)",
+        "capabilities": "Switch IGMP"
+    },
+    {
+        "destination_host": "aegean-sw07.uwaco.com",
+        "management_ip": "",
+        "platform": "cisco C9300L-24P-4X",
+        "remote_port": "GigabitEthernet1/0/1",
+        "local_port": "GigabitEthernet1/0/26",
+        "software_version": "Cisco IOS Software [Gibraltar], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 16.12.1, RELEASE SOFTWARE (fc4)",
+        "capabilities": "Switch IGMP"
+    },
+    {
+        "destination_host": "TS-2509.uwaco.net",
+        "management_ip": "10.1.10.101",
+        "platform": "cisco 2509",
+        "remote_port": "Ethernet0",
+        "local_port": "GigabitEthernet1/0/2",
+        "software_version": "Cisco Internetwork Operating System Software",
+        "capabilities": "Router"
+    },
+    {
+        "destination_host": "celebes-sw05",
+        "management_ip": "10.1.10.216",
+        "platform": "cisco WS-C3850-24P",
+        "remote_port": "GigabitEthernet0/0",
+        "local_port": "GigabitEthernet1/0/42",
+        "software_version": "Cisco IOS Software [Everest], Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 16.6.2, RELEASE SOFTWARE (fc2)",
+        "capabilities": "Switch IGMP"
+    },
+    {
+        "destination_host": "celebes-sw05",
+        "management_ip": "10.10.101.5",
+        "platform": "cisco WS-C3850-24P",
+        "remote_port": "GigabitEthernet1/0/1",
+        "local_port": "GigabitEthernet1/0/25",
+        "software_version": "Cisco IOS Software [Everest], Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 16.6.2, RELEASE SOFTWARE (fc2)",
+        "capabilities": "Switch IGMP"
+    },
+    {
+        "destination_host": "persian-gulf-sw05.uwaco.com",
+        "management_ip": "10.1.10.102",
+        "platform": "cisco WS-C3750-48TS",
+        "remote_port": "FastEthernet1/0/48",
+        "local_port": "GigabitEthernet1/0/48",
+        "software_version": "Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M), Version 12.2(55)SE3, RELEASE SOFTWARE (fc1)",
+        "capabilities": "Router Switch IGMP"
+    },
+    {
+        "destination_host": "na-us-520-wlc01",
+        "management_ip": "10.1.10.109",
+        "platform": "AIR-CT2504-K9",
+        "remote_port": "GigabitEthernet0/0/1",
+        "local_port": "GigabitEthernet1/0/38",
+        "software_version": "Manufacturer's Name: Cisco Systems Inc.  Product Name: Cisco Controller  Product Version: 8.5.151.0  RTOS Version: Erro  Bootloader Version: 1.0.16  Build Type: DATA + WPS",
+        "capabilities": "Host"
+    }
+]
