@@ -9,18 +9,16 @@ from __future__ import absolute_import, division, print_function
 __author__ = "Claudia de Luna (claudia@indigowire.net)"
 __version__ = ": 1.0 $"
 __date__ = "9/23/21"
-__copyright__ = "Copyright (c) 2018 Claudia"
+__copyright__ = "Copyright (c) 2021 Claudia"
 __license__ = "Python"
 
 import argparse
 import base64
 import os
+import io
 import jinja2
 import datetime
-import markdown
-import weasyprint
-
-import requests, io
+import requests
 from PIL import Image
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -28,17 +26,19 @@ import pandas as pd
 
 def j2render(cfg_template_values, j2_template, debug=False):
 
-    ##############################################
-    ### Render the Jinja2 Template with the values
-    ##############################################
+    # #############################################
+    # ## Render the Jinja2 Template with the values
+    # #############################################
 
-    if debug: print(f"j2_template: {j2_template}")
+    if debug:
+        print(f"j2_template: {j2_template}")
 
     with open(j2_template) as file_:
         template = jinja2.Template(file_.read())
 
     rendered = template.render(cfg=cfg_template_values)
-    if debug: print(rendered)
+    if debug:
+        print(rendered)
 
     return rendered
 
@@ -50,7 +50,10 @@ def mermaid_render(diagram_as_string, filename="mermaid_diagram", save_jpg=False
     :param diagram_as_string:
     :param filename: optional filename header
     :param debug: optional verbose printing
+    :param save_jpg:
+    :param debug:
     :return: response.url
+
     """
 
     # Directly from Mermaid Tutorial
@@ -107,7 +110,8 @@ def main():
 
     # Use Pandas to read in an Excel file
     excel_file = 'sites_base_stations.xlsx'
-    print(f"\nReading Excel file <{excel_file}> Site information for each LoraWan Gateway (Base Station) into Pandas DataFrame...")
+    print(f"\nReading Excel file <{excel_file}> "
+          f"Site information for each LoraWan Gateway (Base Station) into Pandas DataFrame...")
     df = pd.read_excel(excel_file)
     df.fillna('', inplace=True)
 
@@ -140,7 +144,6 @@ def main():
         print(f"\nSaving rendered Markdown Report to:\n\t{os.getcwd()} > {output_filename}\n")
         with open(output_filename, "w") as outfile:
             outfile.write(markdown_report)
-
 
 
 # Standard call to the main() function.
