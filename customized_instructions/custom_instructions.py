@@ -80,7 +80,7 @@ def mermaid_render(diagram_as_string, filename="mermaid_diagram", save_jpg=False
         jpg_file = f"{filename}_flow_diagram.jpg"
         txt_file = f"{filename}_mermaid_seq_diagram.txt"
 
-        print(f"\nSaving text diagram description for revision control to:\n\t{os.getcwd()} > {txt_file}\n")
+        print(f"\nSaving text diagram description for revision control to:\n\t{os.getcwd()} > {txt_file}")
         with open(txt_file, 'w') as fh:
             fh.write(diagram_as_string)
 
@@ -122,12 +122,13 @@ def main():
     for site_dict in sites_lod:
         print(f"\n================ Processing site {site_dict['Site']}...")
 
-        # Bad idea to change the data structure you are iterating over so copy site_dict
-
+        # Bad idea to change the data structure you are iterating over so copy site_dict so we can add values
+        # sd (site_dict plus additional values) will be sent to the Jinja2 Report Template
         sd = site_dict.copy()
 
         flow_j2template = "base_station2tpe_flows_mermaid_seq.j2"
 
+        print(f"\nCreating mermaid drawing in text...")
         diagram_text = j2render(site_dict, flow_j2template)
 
         diag_url = mermaid_render(diagram_text,filename=f"{site_dict['Site']}")
