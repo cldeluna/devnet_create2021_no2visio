@@ -23,12 +23,16 @@ import pandas as pd
 
 
 def main():
+    """
+    Given an Excel spreadsheet of application flows, create a flow (sequence) diagram with Mingrammer Mermaid Ink API
+    :return:
+    """
 
-    # Use Pandas to read in an Excel file
-
+    # set shorter initial options
     include_ips = arguments.include_ips
     verbose = arguments.verbose
 
+    # Use Pandas to read in an Excel file
     excel_file = "base_station2tpe_flows.xlsx"
     print(
         f"\nReading Excel file <{excel_file}> containing Actility ThingPark Enterprise (TPE) LoRaWan Application Flow Requirements into Pandas DataFrame..."
