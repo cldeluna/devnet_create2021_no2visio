@@ -1,7 +1,7 @@
 | 2021 DevNet Create<br />Just Say No To Visio | ![TS30-claudiadeluna_final](images/TS30-claudiadeluna_final.jpg) |
 | -------------------------------------------- | ------------------------------------------------------------ |
 
-
+[Just say No to Visio DevNet Create Video on YouTube](https://youtu.be/6qDTF-rdnI0?si=wkbTAXSuuikK6NSH)
 
 ### Documentation as Code
 
