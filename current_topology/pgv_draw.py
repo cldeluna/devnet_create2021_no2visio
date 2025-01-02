@@ -32,6 +32,14 @@ def pgv_diagram(
     # dict_keys(['fwlb', 'fwlo', 'fwlr', 'wlcb', 'wlcw', 'sp', 'rtrbc',
     # 'rtrgc', 'rtrblkc', 'swsblk', 'swsb', 'swsbb', 'swsbg', 'wifipm', 'wifib'])
 
+    # Check if the directory exists
+    if not os.path.exists(save_subdir):
+        # Create the directory
+        os.makedirs(save_subdir)
+        print(f"Directory '{save_subdir}' created.")
+    else:
+        print(f"Directory '{save_subdir}' already exists.")
+
     image_format = "png"
     drawing_filename = f"{root_info['hostname']}_Current_Topology_pygraphviz"
     drawing_fp = os.path.join(
@@ -95,6 +103,7 @@ def pgv_diagram(
         # Create EDGES (Connections)
         # Connect Root device node to each neighbor node
         G.add_edge(root_dev, nnode, headlabel=nei["remote_port"], minlen="3")
+
 
     # Save the DOT file
     # This file can be kept under revision control
