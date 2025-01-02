@@ -34,8 +34,14 @@ Script to quickly draw CDP Neighbors of a given device.
 
 ### Creating Your Environment
 
+Install Graphviz Application
 https://graphviz.gitlab.io/download/
 
+Using latest Python 3.10
+```bash
+% python -V
+Python 3.10.14
+```
 
 ```python
 pip install --upgrade pip
