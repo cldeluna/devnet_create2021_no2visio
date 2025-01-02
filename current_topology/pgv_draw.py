@@ -33,7 +33,7 @@ def pgv_diagram(
     # 'rtrgc', 'rtrblkc', 'swsblk', 'swsb', 'swsbb', 'swsbg', 'wifipm', 'wifib'])
 
     image_format = "png"
-    drawing_filename = f"{root_info['hostname']}_Current_Topology_pgv"
+    drawing_filename = f"{root_info['hostname']}_Current_Topology_pygraphviz"
     drawing_fp = os.path.join(
         save_dir, save_subdir, f"{drawing_filename}.{image_format}"
     )
@@ -108,11 +108,11 @@ def pgv_diagram(
     G.draw(drawing_fp)
 
     print(
-        f"\n\nDIAGRAM in {image_format.upper()} Format for {root_dev} Complete:\n\t{drawing_fp}_pgv.{image_format}"
+        f"\n\nDIAGRAM in {image_format.upper()} Format for {root_dev} Complete:\n\t{drawing_fp}"
     )
 
     print(
-        f"\n\nDIAGRAM in DOT Notation for {root_dev} Complete:\n\t{drawing_fp}_pgv.dot\n"
+        f"\n\nDIAGRAM in DOT Notation for {root_dev} Complete:\n\t{drawing_fp}.dot\n"
     )
 
 
@@ -125,7 +125,7 @@ def main():
     # Load show version output (saved as JSON)
     root_dev_info = gen_utils.load_json("10.1.10.212_show_version.json")
 
-    # Load show cdp neighbor detail output
+    # Load show cdp neighbor detail output (saved as JSON)
     resp = gen_utils.load_json("10.1.10.212_show_cdp_neighbor_detail.json")
 
     # Draw the Current Topology using pygraphviz
