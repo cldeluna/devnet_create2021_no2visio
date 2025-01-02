@@ -43,6 +43,11 @@ Using latest Python 3.10
 Python 3.10.14
 ```
 
+```bash
+% dot -V
+dot - graphviz version 12.2.1 (20241206.2353)
+```
+
 ```python
 pip install --upgrade pip
 
